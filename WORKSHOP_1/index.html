@@ -21,6 +21,18 @@
         <button @click=" addNewProductToCart">{{ btnText }}</button>
         <br>
         <button @click="decNewProductToCart">Удалить</button>
+
+        <hr>
+
+        <h2>Задание 3</h2>
+        <!-- работу функции можно описать прямо внутри директивы -->
+        <button @click="isCanBuy = !isCanBuy">Мне 14 лет</button>
+        <!-- vshow - директива видимости -->
+        <p v-show="isCanBuy">Вы можете заказать товар</p>
+        <br>
+        <br>
+        <button @click="isCantBuy = !isCantBuy">Мне ещё нет 14 лет</button>
+        <p v-show=" isCantBuy">Доступ закрыт</p>
     </div>
 
     <!-- подключение vue -->
@@ -31,7 +43,9 @@
                 return {
                     message: 'Hello Vue!',
                     count: 0,
-                    btnText: 'Купить'
+                    btnText: 'Купить',
+                    isCanBuy: false,
+                    isCantBuy: false,
                 }
             },
             methods: {
