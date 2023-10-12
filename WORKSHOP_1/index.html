@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 1</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2> Задание 1</h2>
+        {{ message }}
+    </div>
+
+    <!-- подключение vue -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const App = {
+            data() {
+                return {
+                    message: 'Hello Vue!'
+                }
+            }
+        }
+
+        Vue.createApp(App).mount('#app')
+    </script>
+</body>
+
+</html>
