@@ -5,6 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop 1</title>
+
+    <style>
+        @keyframes showText {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+
+        }
+
+        .animation {
+            animation: showText 1s ease-in-out;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -28,11 +46,24 @@
         <!-- работу функции можно описать прямо внутри директивы -->
         <button @click="isCanBuy = !isCanBuy">Мне 14 лет</button>
         <!-- vshow - директива видимости -->
+        <!-- элемент будет присутствовать на странице, но иметь display: none -->
         <p v-show="isCanBuy">Вы можете заказать товар</p>
         <br>
         <br>
         <button @click="isCantBuy = !isCantBuy">Мне ещё нет 14 лет</button>
         <p v-show=" isCantBuy">Доступ закрыт</p>
+
+        <hr>
+
+        <h2>Задание 4</h2>
+        <button @click="isShowMore = !isShowMore">Показать ещё</button>
+        <!-- vif - условие в html -->
+        <!-- в данном случае элемент ПРОПАДЕТ со страницы -->
+        <!-- + реализация анимации -->
+        <p class="animation" v-if="isShowMore">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem nam
+            libero nulla magni
+            architecto ratione voluptates labore expedita? Dolorem, magnam inventore accusantium recusandae, officiis
+            laboriosam iure saepe eligendi fuga expedita obcaecati?</p>
     </div>
 
     <!-- подключение vue -->
@@ -46,6 +77,7 @@
                     btnText: 'Купить',
                     isCanBuy: false,
                     isCantBuy: false,
+                    isShowMore: false,
                 }
             },
             methods: {
