@@ -15,7 +15,6 @@
             to {
                 opacity: 1;
             }
-
         }
 
         .animation {
@@ -64,6 +63,16 @@
             libero nulla magni
             architecto ratione voluptates labore expedita? Dolorem, magnam inventore accusantium recusandae, officiis
             laboriosam iure saepe eligendi fuga expedita obcaecati?</p>
+
+        <hr>
+
+        <h2>Задание 5</h2>
+        <button @click="generate">Сгенерировать случайное число</button>
+        <h1>{{ generateNumber }}</h1>
+        <!-- чтобы все условия срабатывали верно, параграфы д.б. на одном уровне вложенности (без div) -->
+        <p v-if="generateNumber < 5">Число меньше 5</p>
+        <p v-else-if="generateNumber >= 5 && generateNumber < 10">Число от 5 до 9</p>
+        <p v-else>Число равно 10</p>
     </div>
 
     <!-- подключение vue -->
@@ -78,6 +87,7 @@
                     isCanBuy: false,
                     isCantBuy: false,
                     isShowMore: false,
+                    generateNumber: null,
                 }
             },
             methods: {
@@ -106,7 +116,10 @@
                 decNewProductToCart() {
                     this.decCount()
                     this.changeBtnText()
-                }
+                },
+                generate() {
+                    this.generateNumber = Math.floor(Math.random() * 10 + 1);
+                },
             },
         }
 
