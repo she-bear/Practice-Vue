@@ -8,9 +8,19 @@
 </head>
 
 <body>
+    <!-- Условия задач: https://disk.yandex.ru/i/iTED3hZEWTVrIQ -->
     <div id="app">
         <h2> Задание 1</h2>
         {{ message }}
+
+        <hr>
+
+        <h2>Задание 2</h2>
+        <p>Товаров в корзине {{ count }}</p>
+        <!-- von отвечает за вызов события -->
+        <button @click=" addNewProductToCart">{{ btnText }}</button>
+        <br>
+        <button @click="decNewProductToCart">Удалить</button>
     </div>
 
     <!-- подключение vue -->
@@ -19,9 +29,41 @@
         const App = {
             data() {
                 return {
-                    message: 'Hello Vue!'
+                    message: 'Hello Vue!',
+                    count: 0,
+                    btnText: 'Купить'
                 }
-            }
+            },
+            methods: {
+                addCount() {
+                    // обращение к контексту, count ищется внутри App
+                    if (this.count < 1) {
+                        this.count++;
+                        // this.btnText = 'Товар в корзине'
+                    }
+                },
+                decCount() {
+                    if (this.count !== 0) {
+                        this.count--;
+                        // this.btnText = 'Купить'
+                    }
+                },
+                changeBtnText() {
+                    if (this.count < 1) {
+                        this.btnText = 'Купить';
+                    } else {
+                        this.btnText = 'Товар в корзине';
+                    }
+                },
+                addNewProductToCart() {
+                    this.addCount()
+                    this.changeBtnText()
+                },
+                decNewProductToCart() {
+                    this.decCount()
+                    this.changeBtnText()
+                }
+            },
         }
 
         Vue.createApp(App).mount('#app')
