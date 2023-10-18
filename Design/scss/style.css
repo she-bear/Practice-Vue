@@ -99,4 +99,70 @@ a {
   line-height: 125%;
   text-align: center;
   letter-spacing: 0.36px;
+}
+
+.projects {
+  padding-top: 97px;
+  padding-bottom: 97px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+}
+.projects__text {
+  font-family: "Jost", sans-serif;
+  color: #4D5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  max-width: 737px;
+  text-align: center;
+  padding-top: 8px;
+}
+.projects__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 56px;
+  -moz-column-gap: 104px;
+       column-gap: 104px;
+  padding-top: 93px;
+  padding-bottom: 96px;
+}
+.projects__item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.projects__item__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects__item__content__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+}
+.projects__item__content__subtitle {
+  font-family: "Jost", sans-serif;
+  color: #4D5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
 }/*# sourceMappingURL=style.css.map */

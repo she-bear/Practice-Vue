@@ -61,3 +61,55 @@ a {
         }
     }
 }
+
+.projects {
+    padding-top: 97px;
+    padding-bottom: 97px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%);
+        letter-spacing: 1px;
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%);
+        letter-spacing: 0.22px;
+        max-width: 737px;
+        text-align: center;
+        padding-top: 8px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 56px;
+        column-gap: 104px;
+        padding-top: 93px;
+        padding-bottom: 96px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &__title {
+                @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%);
+                letter-spacing: 0.5px;
+            }
+
+            &__subtitle {
+                @include font('Jost', sans-serif, $textColor, 22px, 400, 150%);
+                letter-spacing: 0.22px;
+            }
+        }
+    }
+}
