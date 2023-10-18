@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &__link {
+            @include font('DM Serif Display', serif, $titleColor, 40px, 400, 125%);
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+
+        &__item {
+            @include font('Jost', sans-serif, $titleColor, 20px, 400, 125%);
+        }
+    }
+}

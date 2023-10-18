@@ -1,3 +1,38 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__left__link {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.header__right__item {
+  font-family: "Jost", sans-serif;
+  color: #292F36;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+
 * {
   margin: 0;
   padding: 0;
