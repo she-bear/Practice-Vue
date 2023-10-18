@@ -1,5 +1,5 @@
-@mixin font ($font-family, $color, $fontsize, $fontweight, $line_height: normal) {
-    font-family: $font-family;
+@mixin font ($family-name, $generic-family, $color, $fontsize, $fontweight, $line_height: normal) {
+    font-family: $family-name, $generic-family;
     color: $color;
     font-size: $fontsize;
     font-style: normal;
