@@ -1,8 +1,9 @@
-@mixin font ($family-name, $generic-family, $color, $fontsize, $fontweight, $line_height: normal) {
+@mixin font ($family-name, $generic-family, $color, $fontsize, $fontweight, $line_height: normal, $letter-spacing: normal) {
     font-family: $family-name, $generic-family;
     color: $color;
     font-size: $fontsize;
     font-style: normal;
     font-weight: $fontweight;
     line-height: $line_height;
+    letter-spacing: $letter-spacing;
 }

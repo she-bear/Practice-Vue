@@ -37,8 +37,7 @@ a {
         }
 
         &__subtitle {
-            @include font('Jost', sans-serif, $titleColor, 22px, 400, 150%);
-            letter-spacing: 0.22px;
+            @include font('Jost', sans-serif, $titleColor, 22px, 400, 150%, 0.22px);
         }
 
         &__button {
@@ -55,9 +54,8 @@ a {
 
             padding: 26px 49px;
             box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
-            @include font('Jost', sans-serif, #FFF, 18px, 600, 125%);
+            @include font('Jost', sans-serif, #FFF, 18px, 600, 125%, 0.36px);
             text-align: center;
-            letter-spacing: 0.36px;
         }
     }
 }
@@ -70,13 +68,11 @@ a {
     align-items: center;
 
     &__title {
-        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%);
-        letter-spacing: 1px;
+        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%, 1px);
     }
 
     &__text {
-        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%);
-        letter-spacing: 0.22px;
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
         max-width: 737px;
         text-align: center;
         padding-top: 8px;
@@ -102,13 +98,11 @@ a {
             justify-content: space-between;
 
             &__title {
-                @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%);
-                letter-spacing: 0.5px;
+                @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%, 0.5px);
             }
 
             &__subtitle {
-                @include font('Jost', sans-serif, $textColor, 22px, 400, 150%);
-                letter-spacing: 0.22px;
+                @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
             }
         }
     }
@@ -134,13 +128,11 @@ a {
     }
 
     &__number {
-        @include font('DM Serif Display', serif, $secondTextColor, 85px, 400, 125%);
-        letter-spacing: 1.7px;
+        @include font('DM Serif Display', serif, $secondTextColor, 85px, 400, 125%, 1.7px);
     }
 
     &__text {
-        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%);
-        letter-spacing: 0.22px;
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
     }
 }
 
@@ -152,13 +144,11 @@ a {
     align-items: center;
 
     &__title {
-        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%);
-        letter-spacing: 1px;
+        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%, 1px);
     }
 
     &__text {
-        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%);
-        letter-spacing: 0.22px;
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
         max-width: 737px;
         text-align: center;
         padding-top: 12px;
@@ -177,8 +167,7 @@ a {
         padding: 21px;
 
         &__title {
-            @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%);
-            letter-spacing: 0.5px;
+            @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%, 0.5px);
             padding-top: 21px;
         }
 
@@ -190,8 +179,7 @@ a {
         }
 
         &__data {
-            @include font('Jost', sans-serif, $textColor, 16px, 400, 150%);
-            letter-spacing: 0.16px;
+            @include font('Jost', sans-serif, $textColor, 16px, 400, 150%, 0.16px);
             text-transform: capitalize;
         }
     }
