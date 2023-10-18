@@ -113,3 +113,33 @@ a {
         }
     }
 }
+
+.statistic {
+    background-color: $fillColor;
+    padding-top: 151px;
+    padding-bottom: 151px;
+    display: flex;
+    justify-content: space-around;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__line {
+        border-left: 2px solid $secondTextColor;
+        height: 130px;
+    }
+
+    &__number {
+        @include font('DM Serif Display', serif, $secondTextColor, 85px, 400, 125%);
+        letter-spacing: 1.7px;
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%);
+        letter-spacing: 0.22px;
+    }
+}
