@@ -1,0 +1,310 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.header__right__item {
+  font-family: "Jost", sans-serif;
+  color: #292F36;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: normal;
+}
+
+.main {
+  position: relative;
+}
+.main__content {
+  position: absolute;
+  max-width: 450px;
+  top: 200px;
+  left: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  align-items: flex-start;
+}
+.main__content__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: normal;
+}
+.main__content__subtitle {
+  font-family: "Jost", sans-serif;
+  color: #292F36;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+.main__content__button {
+  border-radius: 18px;
+  background: #292F36;
+  border-color: #292F36;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 26px 49px;
+  box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+  font-family: "Jost", sans-serif;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 0.36px;
+  text-align: center;
+}
+
+.projects {
+  padding-top: 97px;
+  padding-bottom: 97px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+}
+.projects__text {
+  font-family: "Jost", sans-serif;
+  color: #4D5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  max-width: 737px;
+  text-align: center;
+  padding-top: 8px;
+}
+.projects__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 56px;
+  -moz-column-gap: 104px;
+       column-gap: 104px;
+  padding-top: 93px;
+}
+.projects__item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.projects__item__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects__item__content__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+}
+.projects__item__content__subtitle {
+  font-family: "Jost", sans-serif;
+  color: #4D5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+
+.statistic {
+  background-color: #F4F0EC;
+  padding-top: 151px;
+  padding-bottom: 151px;
+  display: flex;
+  justify-content: space-around;
+}
+.statistic__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.statistic__line {
+  border-left: 2px solid #CDA274;
+  height: 130px;
+}
+.statistic__number {
+  font-family: "DM Serif Display", serif;
+  color: #CDA274;
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1.7px;
+}
+.statistic__text {
+  font-family: "Jost", sans-serif;
+  color: #4D5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+
+.articles {
+  padding-top: 97px;
+  padding-bottom: 97px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.articles__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+}
+.articles__text {
+  font-family: "Jost", sans-serif;
+  color: #4D5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  max-width: 737px;
+  text-align: center;
+  padding-top: 12px;
+}
+.articles__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 27px;
+  padding-top: 52px;
+}
+.articles__item {
+  border: 1px solid #E7E7E7;
+  border-radius: 62px;
+  padding: 21px;
+}
+.articles__item__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  padding-top: 21px;
+}
+.articles__item__bottom {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.articles__item__data {
+  font-family: "Jost", sans-serif;
+  color: #4D5053;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 101px;
+  padding-bottom: 134px;
+}
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer__column_shifted {
+  padding-left: 101px;
+}
+.footer__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: normal;
+}
+.footer__text {
+  font-family: "Jost", sans-serif;
+  color: #4D5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+.footer__icons {
+  display: flex;
+  gap: 54px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,225 @@
+@import 'mixins.scss';
+@import 'vars.scss';
+@import 'header.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 40px, 400, 125%);
+    }
+}
+
+.main {
+    position: relative;
+
+    &__content {
+        position: absolute;
+        max-width: 450px;
+        top: 200px;
+        left: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+        align-items: flex-start;
+
+        &__title {
+            @include font('DM Serif Display', serif, $titleColor, 65px, 400, 125%);
+        }
+
+        &__subtitle {
+            @include font('Jost', sans-serif, $titleColor, 22px, 400, 150%, 0.22px);
+        }
+
+        &__button {
+            border-radius: 18px;
+            background: $titleColor;
+            border-color: $titleColor;
+            border-style: solid;
+            border-width: 1px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            padding: 26px 49px;
+            box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+            @include font('Jost', sans-serif, #FFF, 18px, 600, 125%, 0.36px);
+            text-align: center;
+        }
+    }
+}
+
+.projects {
+    padding-top: 97px;
+    padding-bottom: 97px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%, 1px);
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
+        max-width: 737px;
+        text-align: center;
+        padding-top: 8px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 56px;
+        column-gap: 104px;
+        padding-top: 93px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &__title {
+                @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%, 0.5px);
+            }
+
+            &__subtitle {
+                @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
+            }
+        }
+    }
+}
+
+.statistic {
+    background-color: $fillColor;
+    padding-top: 151px;
+    padding-bottom: 151px;
+    display: flex;
+    justify-content: space-around;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__line {
+        border-left: 2px solid $secondTextColor;
+        height: 130px;
+    }
+
+    &__number {
+        @include font('DM Serif Display', serif, $secondTextColor, 85px, 400, 125%, 1.7px);
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
+    }
+}
+
+.articles {
+    padding-top: 97px;
+    padding-bottom: 97px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%, 1px);
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
+        max-width: 737px;
+        text-align: center;
+        padding-top: 12px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 27px;
+        padding-top: 52px;
+    }
+
+    &__item {
+        border: 1px solid #E7E7E7;
+        border-radius: 62px;
+        padding: 21px;
+
+        &__title {
+            @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%, 0.5px);
+            padding-top: 21px;
+        }
+
+        &__bottom {
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__data {
+            @include font('Jost', sans-serif, $textColor, 16px, 400, 150%, 0.16px);
+            text-transform: capitalize;
+        }
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 101px;
+    padding-bottom: 134px;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__column_shifted {
+        padding-left: 101px;
+    }
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%);
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
+    }
+
+    &__icons {
+        display: flex;
+        gap: 54px;
+    }
+}
