@@ -140,7 +140,6 @@ a {
   -moz-column-gap: 104px;
        column-gap: 104px;
   padding-top: 93px;
-  padding-bottom: 96px;
 }
 .projects__item {
   display: flex;
