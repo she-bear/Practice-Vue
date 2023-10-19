@@ -6,20 +6,6 @@
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.header__left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.header__left__link {
-  font-family: "DM Serif Display", serif;
-  color: #292F36;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 125%;
-  letter-spacing: normal;
-}
 .header__right {
   display: flex;
   align-items: center;
@@ -49,6 +35,21 @@ a {
 .center {
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: normal;
 }
 
 .main {
@@ -270,4 +271,41 @@ a {
   line-height: 150%;
   letter-spacing: 0.16px;
   text-transform: capitalize;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 101px;
+  padding-bottom: 134px;
+}
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer__column_shifted {
+  padding-left: 101px;
+}
+.footer__title {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: normal;
+}
+.footer__text {
+  font-family: "Jost", sans-serif;
+  color: #4D5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+.footer__icons {
+  display: flex;
+  gap: 54px;
 }/*# sourceMappingURL=style.css.map */

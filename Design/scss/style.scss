@@ -19,6 +19,16 @@ a {
     padding-right: calc(50% - 600px);
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 40px, 400, 125%);
+    }
+}
+
 .main {
     position: relative;
 
@@ -182,5 +192,35 @@ a {
             @include font('Jost', sans-serif, $textColor, 16px, 400, 150%, 0.16px);
             text-transform: capitalize;
         }
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 101px;
+    padding-bottom: 134px;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__column_shifted {
+        padding-left: 101px;
+    }
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%);
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
+    }
+
+    &__icons {
+        display: flex;
+        gap: 54px;
     }
 }
