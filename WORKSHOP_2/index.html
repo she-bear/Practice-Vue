@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Задание 1 -->
+        <div>
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.price }}</p>
+            <!-- здесь используем v-bind, т.к. через кавычки не передать с помощью {{}} -->
+            <img :src="product.img" width="100" alt="photo">
+            <button @click="getSale" :disabled="isEnable">Скидка!</button>
+        </div>
+    </div>
+
+    <!-- подключение vue -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script>
+        const App = {
+            data() {
+                return {
+                    product: {
+                        name: "apple",
+                        price: 10000,
+                        img: "https://static8.depositphotos.com/1000635/967/i/450/depositphotos_9675733-stock-photo-gold-apple.jpg",
+                    },
+                    isEnable: false,
+                }
+            },
+            methods: {
+                getSale() {
+                    const sale = Math.floor(Math.random() * 20 + 1);
+                    this.product.price = this.product.price - sale / 100 * this.product.price;
+                    this.isEnable = true;
+                }
+            },
+        }
+        Vue.createApp(App).mount("#app");
+    </script>
+</body>
+
+</html>
