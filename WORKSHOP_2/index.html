@@ -30,6 +30,19 @@
                 <input v-model.lazy="item.amount" type="text"> {{ item.amount }}
             </li>
         </ul>
+
+        <!-- Задание 4 -->
+        <form action="#">
+            Name: <input type="text" v-model.lazy="name">
+            Surname: <input type="text" v-model.lazy="surname">
+            Email: <input type="email" v-model.lazy="email">
+            <button @click="addUser">Send</button>
+        </form>
+        <ul>
+            <li v-for="(user, index) in usersAll" :key="index">{{ user.name }} - {{ user.surname }} - {{
+                user.email }}
+            </li>
+        </ul>
     </div>
 
     <!-- подключение vue -->
@@ -60,6 +73,11 @@
                         { id: 3, title: 'Соль', amount: 12 },
                         { id: 4, title: 'Сахар', amount: 53 },
                     ],
+                    // 4
+                    name: '',
+                    surname: '',
+                    email: '',
+                    usersAll: [],
                 }
             },
             methods: {
@@ -67,6 +85,14 @@
                     const sale = Math.floor(Math.random() * 20 + 1);
                     this.product.price = this.product.price - sale / 100 * this.product.price;
                     this.isEnable = true;
+                },
+                addUser() {
+                    const user = {
+                        name: this.name,
+                        surname: this.surname,
+                        email: this.email,
+                    }
+                    this.usersAll.push(user);
                 }
             },
         }
