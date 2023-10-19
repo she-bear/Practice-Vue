@@ -1,0 +1,21 @@
+.blog__top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    &__intro {
+        border-radius: 37px 37px 0px 0px;
+        background: #FFF;
+        position: absolute;
+        padding: 41px 78px;
+    }
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%);
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
+    }
+}
