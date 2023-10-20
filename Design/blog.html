@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div>
         <header class="header center">
             <div class="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
@@ -61,6 +61,30 @@
 
         </section>
 
+        <section id="app" class="articles center">
+            <h2 class="articles__title">Articles & News</h2>
+            <div class="articles__content">
+                <article v-for="article in articles" :key="article.id" class="articles__item">
+                    <img :src=article.img alt="Article photo">
+                    <h3 class="articles__item__title">{{ article.title }}</h3>
+                    <div class="articles__item__bottom">
+                        <p class="articles__item__data">{{ article.data }} </p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                            <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </article>
+            </div>
+            <div class="articles__pagination">
+                <img src="img/pagination_01.svg" alt="pagination icon">
+                <img src="img/pagination_02.svg" alt="pagination icon">
+                <img src="img/pagination_03.svg" alt="pagination icon">
+                <img src="img/pagination_more.svg" alt="pagination icon">
+            </div>
+        </section>
+
         <footer class="footer center">
             <div class="footer__column">
                 <div class="logo">
@@ -100,7 +124,18 @@
         const App = {
             data() {
                 return {
-
+                    articles: [
+                        { id: 1, img: 'img/article_photo1.png', title: 'Let’s Get Solution For Building Construction Work', data: '26 December, 2022' },
+                        {
+                            id: 2, img: 'img/article_photo2.png', title: 'Low Cost Latest Invented Interior Designing Ideas.', data: '22 December, 2022'
+                        },
+                        { id: 3, img: 'img/article_photo3.png', title: 'Best For Any Office & Business Interior Solution', data: '25 December, 2022' },
+                        { id: 4, img: 'img/article_photo4.png', title: 'Let’s Get Solution For Building Construction Work', data: '26 December, 2022' },
+                        {
+                            id: 5, img: 'img/article_photo5.png', title: 'Low Cost Latest Invented Interior Designing Ideas.', data: '22 December, 2022'
+                        },
+                        { id: 6, img: 'img/article_photo6.png', title: 'Best For Any Office & Business Interior Solution', data: '25 December, 2022' }
+                    ]
                 }
             },
         }

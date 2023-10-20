@@ -330,7 +330,8 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 27px;
-  padding-top: 52px;
+  margin-top: 52px;
+  margin-bottom: 52px;
 }
 .articles__item {
   border: 1px solid #E7E7E7;
@@ -362,6 +363,11 @@ a {
   line-height: 150%;
   letter-spacing: 0.16px;
   text-transform: capitalize;
+}
+.articles__pagination {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 144px;
 }
 
 .footer {
