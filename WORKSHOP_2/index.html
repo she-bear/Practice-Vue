@@ -32,14 +32,15 @@
         </ul>
 
         <!-- Задание 4 -->
-        <form action="#">
+        <form action="#" @submit.prevent="addUser">
             Name: <input type="text" v-model.lazy="name">
             Surname: <input type="text" v-model.lazy="surname">
-            Email: <input type="email" v-model.lazy="email">
-            <button @click="addUser">Send</button>
+            Email: <input type="text" v-model.lazy="email">
+            <button>Send</button>
         </form>
         <ul>
-            <li v-for="(user, index) in usersAll" :key="index">{{ user.name }} - {{ user.surname }} - {{
+            <li v-for="(user, index) in usersAll" :key="index" @click="deleteUser(index)">{{ user.name }} - {{
+                user.surname }} - {{
                 user.email }}
             </li>
         </ul>
@@ -93,6 +94,17 @@
                         email: this.email,
                     }
                     this.usersAll.push(user);
+                    this.name = '';
+                    this.surname = '';
+                    this.email = '';
+                },
+                // deleteUser(event) {
+                //     // event.target - получили конкретный <li>, на который кликнули мышкой
+                //     // удалили элемент из DOM-дерева (в массиве остался!) 
+                //     event.target.remove();
+                // },
+                deleteUser(index) {
+                    this.userAll.splice(index, 1);
                 }
             },
         }
