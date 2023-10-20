@@ -1,6 +1,7 @@
 @import 'mixins.scss';
 @import 'vars.scss';
 @import 'header.scss';
+@import 'blog.scss';
 
 * {
     margin: 0;
@@ -167,7 +168,8 @@ a {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 27px;
-        padding-top: 52px;
+        margin-top: 52px;
+        margin-bottom: 52px;
     }
 
     &__item {
@@ -191,6 +193,12 @@ a {
             @include font('Jost', sans-serif, $textColor, 16px, 400, 150%, 0.16px);
             text-transform: capitalize;
         }
+    }
+
+    &__pagination {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 144px;
     }
 }
 
