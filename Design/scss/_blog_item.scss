@@ -1,0 +1,65 @@
+.blog__item {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 52px;
+    padding-top: 150px;
+    padding-bottom: 70px;
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%, 1px);
+        margin-bottom: 20px;
+    }
+
+    &__img {
+        margin-bottom: 46px;
+    }
+
+    &__data {
+        display: flex;
+        gap: 410px;
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $titleColor, 22px, 400, 150%, 0.22px);
+        margin-bottom: 35px;
+    }
+
+    &__text li {
+        margin-bottom: 32px;
+        padding-left: 14px;
+    }
+
+    &__tag {
+        @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%, 0.5px);
+        margin-bottom: 24px;
+    }
+
+    &__button {
+        border-radius: 10px;
+        background: $fillColor;
+        border-color: $fillColor;
+        border-style: solid;
+        border-width: 1px;
+        padding: 9px 30px;
+        @include font('Jost', sans-serif, $titleColor, 18px, 400, 125%, 0.36px);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__button:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__button:focus {
+        background-color: $titleColor;
+        color: #fff;
+        cursor: pointer;
+    }
+
+
+}
+
+ol li::marker {
+    @include font('DM Serif Display', serif, $secondTextColor, 20px, 400, 125%, 0.4px);
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details</title>
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <header class="header center">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <path
+                        d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
+                        fill="#CDA274" />
+                </svg>
+                <a href="index.html" class="logo__title">Interno</a>
+            </div>
+            <nav class="header__right">
+                <a href="#" class="header__right__item">Home</a>
+                <a href="#" class="header__right__item">Project</a>
+                <a href="#" class="header__right__item">Blog</a>
+            </nav>
+        </header>
+
+        <section class="blog__top">
+            <img src="img/top_blogdetails.png" alt="Top blog details image">
+        </section>
+
+        <section id="app" class="blog__item center">
+            <div>
+                <div v-for="post in this.current" :key="post.id" class="blog__item__content">
+                    <h2 class="blog__item__title"> {{ post.title }}</h2>
+
+                    <img class="blog__item__img" src="img/blog_item_image1.png" alt="Top blog image">
+
+                    <div class="blog__item__data">
+                        <p class="articles__item__data">26 December, 2022</p>
+                        <p class="articles__item__data">{{ post.route }}</p>
+                    </div>
+
+                    <p class="blog__item__text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+                        turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem
+                        Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or
+                        randomised words which don't look even slightly believable.</p>
+                    <p class="blog__item__text">Embarrassing hidden in the middle of text. All the Lorem Ipsum
+                        generators on
+                        the Internet tend to repeat predefined chunks as necessary.</p>
+
+                    <img class="blog__item__img" src="img/blog_item_quotes.png" alt="Quotes image">
+
+                    <h2 class="blog__item__title">Design sprints are great</h2>
+
+                    <p class="blog__item__text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+                        turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem
+                        Ipsum available, but the majority have suffered.</p>
+
+                    <ol class="blog__item__text">
+                        <li class="blog__item__li">Contrary to popular belief.There are many variations of passages of
+                            Lorem
+                            Ipsum available, but the majority have suffered.</li>
+                        <li class="blog__item__li">Contrary to popular belief.There are many variations of passages of
+                            Lorem
+                            Ipsum available, but the majority have suffered.</li>
+                        <li class="blog__item__li">Contrary to popular belief.There are many variations of passages of
+                            Lorem
+                            Ipsum available, but the majority have suffered.</li>
+                    </ol>
+
+                    <img class="blog__item__img" src="img/blog_item_second_image1.png" alt="Top blog image">
+
+                    <p class="blog__item__text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+                        turpmaximus.posuere in.Contrary to
+                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority
+                        have
+                        suffered.</p>
+                </div>
+            </div>
+
+            <div class="blog__item__tags">
+                <p class="blog__item__tag">Tags</p>
+                <div>
+                    <button class="blog__item__button" @click="getPostFiltered('Kitchen')">Kitchen</button>
+                    <button class=" blog__item__button" @click="getPostFiltered('Bedroom')">Bedroom</button>
+                    <button class=" blog__item__button" @click="getPostFiltered('Building')">Building</button>
+                    <button class=" blog__item__button" @click="getPostFiltered('Architecture')">Architecture</button>
+                    <button class=" blog__item__button" @click="getPostFiltered('Kitchen Planning')">Kitchen
+                        Planning</button>
+                    <button class=" blog__item__button" @click="getPostFiltered('Children')">Children</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class=" footer center">
+            <div class="footer__column">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <path
+                            d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
+                            fill="#CDA274" />
+                    </svg>
+                    <a href="index.html" class="logo__title">Interno</a>
+                </div>
+                <p class="footer__text">It is a long established fact that a reader will be distracted
+                    lookings.</p>
+                <div class="footer__icons">
+                    <img src="img/twitter_icon.svg" alt="Twitter icon">
+                    <img src="img/in_icon.svg" alt="IN icon">
+                </div>
+            </div>
+            <div class="footer__column footer__column_shifted">
+                <p class="footer__title">Pages</p>
+                <a href="" class="footer__text">Home</a>
+                <a href="" class="footer__text">Project</a>
+                <a href="" class="footer__text">Blog</a>
+            </div>
+            <div class="footer__column footer__column_shifted">
+                <p class="footer__title">Contact</p>
+                <p class="footer__text">55 East Birchwood Ave. Brooklyn, New York 11201</p>
+                <p class="footer__text">contact@interno.com</p>
+                <p class="footer__text">(123) 456 - 7890</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- подключение vue -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script>
+        const App = {
+            data() {
+
+                // в учебном примере не будем перерисовывать весь контент, ограничимся двумя полями, чтобы продемонстрировать переключение
+                const posts = [
+                    {
+                        id: 1,
+                        tag: 'Kitchen',
+                        title: 'Let’s Get Solution for Building Construction Work',
+                        route: 'Interior / Home / Kitchen'
+                    },
+                    {
+                        id: 2,
+                        tag: 'Bedroom',
+                        title: 'Let’s Get Solution for Bedroom',
+                        route: 'Interior / Home / Bedroom'
+                    },
+                    {
+                        id: 3,
+                        tag: 'Building',
+                        title: 'Let’s Get Solution for Building',
+                        route: 'Interior / Home / Building'
+                    },
+                    {
+                        id: 4,
+                        tag: 'Architecture',
+                        title: 'Let’s Get Solution for Architecture',
+                        route: 'Interior / Home / Architecture'
+                    },
+                    {
+                        id: 5,
+                        tag: 'Kitchen Planning',
+                        title: 'Let’s Get Solution for Kitchen Planning',
+                        route: 'Interior / Home / Kitchen Planning'
+                    },
+                    {
+                        id: 6,
+                        tag: 'Children',
+                        title: 'Let’s Get Solution for Children',
+                        route: 'Interior / Home / Children'
+                    },
+                ]
+
+                return {
+                    posts: posts,
+                    current: posts,
+
+                }
+            },
+            methods: {
+                getPostFiltered(tag) {
+                    this.current = this.posts.filter(item => item.tag === tag);
+                }
+            },
+        }
+        Vue.createApp(App).mount("#app");
+    </script>
+</body>
+
+</html>
