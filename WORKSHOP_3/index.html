@@ -10,16 +10,20 @@
 <body>
     <div id="app">
         <counter></counter>
+
+        <list></list>
     </div>
 
     <!-- подключение vue -->
     <script src="https://unpkg.com/vue@next"></script>
     <script src="components/counter.js"></script>
+    <script src="components/list.js"></script>
 
     <script>
         const App = {
             components: {
                 counter,
+                list,
             }
         }
         Vue.createApp(App).mount("#app");
