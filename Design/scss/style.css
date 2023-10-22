@@ -152,6 +152,41 @@
   margin-bottom: 32px;
   padding-left: 14px;
 }
+.blog__item__tag {
+  font-family: "DM Serif Display", serif;
+  color: #292F36;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+.blog__item__button {
+  border-radius: 10px;
+  background: #F4F0EC;
+  border-color: #F4F0EC;
+  border-style: solid;
+  border-width: 1px;
+  padding: 9px 30px;
+  font-family: "Jost", sans-serif;
+  color: #292F36;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.blog__item__button:not(:last-child) {
+  margin-right: 10px;
+}
+.blog__item__button:focus {
+  background-color: #292F36;
+  color: #fff;
+  cursor: pointer;
+}
 
 ol li::marker {
   font-family: "DM Serif Display", serif;
