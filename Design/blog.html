@@ -33,7 +33,7 @@
         <section class="blog__top">
             <img src="img/top_blog.png" alt="Top blog image">
             <div class="blog__top__intro">
-                <h2 class="blog__top__title">Articles & News</h2>
+                <h2 class="blog__top__title">Articles &amp; News</h2>
                 <p class="blog__top__text">Home / Blog</p>
             </div>
         </section>
@@ -62,10 +62,10 @@
         </section>
 
         <section id="app" class="articles center">
-            <h2 class="articles__title">Articles & News</h2>
+            <h2 class="articles__title">Articles &amp; News</h2>
             <div class="articles__content">
                 <article v-for="article in articles" :key="article.id" class="articles__item">
-                    <img :src=article.img alt="Article photo">
+                    <img :src="article.img" alt="Article photo">
                     <h3 class="articles__item__title">{{ article.title }}</h3>
                     <div class="articles__item__bottom">
                         <p class="articles__item__data">{{ article.data }} </p>
