@@ -1,0 +1,66 @@
+.blog__top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    &__intro {
+        border-radius: 37px 37px 0px 0px;
+        background: #FFF;
+        position: absolute;
+        padding: 41px 78px;
+    }
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%);
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
+    }
+}
+
+.latest__post {
+    padding-top: 150px;
+
+    &__title {
+        @include font('DM Serif Display', serif, $titleColor, 50px, 400, 125%, 1px);
+    }
+
+    &__content {
+        border-radius: 62px;
+        border: 1px solid #E7E7E7;
+        box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+
+        padding: 22px;
+        margin-top: 27px;
+        display: flex;
+        align-items: center;
+        gap: 65px;
+    }
+
+    &__left {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    &__subtitle {
+        @include font('DM Serif Display', serif, $titleColor, 25px, 400, 125%, 0.5px);
+    }
+
+    &__text {
+        @include font('Jost', sans-serif, $textColor, 22px, 400, 150%, 0.22px);
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__data {
+        @include font('Jost', sans-serif, $textColor, 16px, 400, 150%, 0.16px);
+        text-transform: capitalize;
+    }
+}
