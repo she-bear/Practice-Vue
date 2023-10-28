@@ -36,7 +36,7 @@
             <p class="projects__text">It is a long established fact that a reader will be distracted by the of readable
                 content of page lookings at its layouts points.</p>
             <div class="projects__content">
-                <article v-for="project in projects" :key="project.id" class="projects__item">
+                <article v-for="(project, index) in projects" :key="index" class="projects__item">
                     <img :src="project.img" alt="Project image">
                     <div class="projects__item__content">
                         <div class="projects__item__content__text">
@@ -68,35 +68,11 @@
             <p class="articles__text">It is a long established fact that a reader will be distracted by the of readable
                 content of a page when lookings at its layouts the points of using.</p>
             <div class="articles__content">
-                <article class="articles__item">
-                    <img src="img/article_photo1.png" alt="Article photo">
-                    <h3 class="articles__item__title">Let’s Get Solution For Building Construction Work</h3>
+                <article v-for="(article, index) in article" :key="index" class="articles__item">
+                    <img :src="article.img" alt="Article photo">
+                    <h3 class="articles__item__title">{{ article.title }}</h3>
                     <div class="articles__item__bottom">
-                        <p class="articles__item__data">26 December, 2022 </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-                            <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </article>
-                <article class="articles__item">
-                    <img src="img/article_photo2.png" alt="Article photo">
-                    <h3 class="articles__item__title">Low Cost Latest Invented Interior Designing Ideas.</h3>
-                    <div class="articles__item__bottom">
-                        <p class="articles__item__data">22 December, 2022 </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-                            <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </article>
-                <article class="articles__item">
-                    <img src="img/article_photo3.png" alt="Article photo">
-                    <h3 class="articles__item__title">Best For Any Office & Business Interior Solution</h3>
-                    <div class="articles__item__bottom">
-                        <p class="articles__item__data">25 December, 2022 </p>
+                        <p class="articles__item__data">{{ article.date }}</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                             <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
                             <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2"
@@ -119,8 +95,8 @@
                 </div>
                 <p class="footer__text">It is a long established fact that a reader will be distracted lookings.</p>
                 <div class="footer__icons">
-                    <img src="img/twitter_icon.svg" alt="Twitter icon">
-                    <img src="img/in_icon.svg" alt="IN icon">
+                    <img :src="twitterIcon" alt="Twitter icon">
+                    <img :src="inIcon" alt="IN icon">
                 </div>
             </div>
             <div class="footer__column footer__column_shifted">
@@ -146,6 +122,11 @@ import projectImage_1 from "@/assets/img/project_photo1.png";
 import projectImage_2 from "@/assets/img/project_photo2.png";
 import projectImage_3 from "@/assets/img/project_photo3.png";
 import projectImage_4 from "@/assets/img/project_photo4.png";
+import articleImage_1 from "@/assets/img/article_photo1.png";
+import articleImage_2 from "@/assets/img/article_photo2.png";
+import articleImage_3 from "@/assets/img/article_photo3.png";
+import twitterIcon from "@/assets/img/twitter_icon.svg";
+import inIcon from "@/assets/img/in_icon.svg";
 
 
 export default {
@@ -197,10 +178,31 @@ export default {
 
         ]
 
+        const article = [
+            {
+                img: articleImage_1,
+                title: 'Let’s Get Solution For Building Construction Work',
+                date: '26 December, 2022',
+            },
+            {
+                img: articleImage_2,
+                title: 'Low Cost Latest Invented Interior Designing Ideas',
+                date: '22 December, 2022',
+            },
+            {
+                img: articleImage_3,
+                title: 'Best For Any Office & Business Interior Solution',
+                date: '23 December, 2022',
+            },
+        ]
+
         return {
             mainImage,
             projects: projects,
             statistic: statistic,
+            article: article,
+            twitterIcon,
+            inIcon,
         }
     },
 
