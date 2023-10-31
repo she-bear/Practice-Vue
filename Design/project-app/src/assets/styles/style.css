@@ -32,7 +32,6 @@
   background: #FFF;
   position: absolute;
   padding: 41px 78px;
-  text-align: center;
 }
 .blog__top__title {
   font-family: "DM Serif Display", serif;
@@ -357,13 +356,19 @@ a {
 }
 .statistic__item {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 54px;
 }
 .statistic__line {
   border-left: 2px solid #CDA274;
   height: 130px;
+}
+.statistic__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 .statistic__number {
   font-family: "DM Serif Display", serif;
