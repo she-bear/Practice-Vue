@@ -450,7 +450,8 @@ a {
   letter-spacing: 0.16px;
   text-transform: capitalize;
 }
-.articles__pagination {
+
+.pagination {
   display: flex;
   gap: 20px;
   margin-bottom: 144px;
