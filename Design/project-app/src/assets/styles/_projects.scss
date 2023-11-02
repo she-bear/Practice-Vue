@@ -1,0 +1,70 @@
+.project {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 61px;
+    align-items: center;
+
+    &__buttons {
+        width: 880px;
+        border: 1px solid $secondTextColor;
+        border-radius: 18px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    &__button {
+        border: none;
+        background-color: #fff;
+        width: 220px;
+        height: 75px;
+        border-radius: 18px;
+        @include font('Jost', sans-serif, $titleColor, 18px, 700, 125%, 0.36px);
+    }
+
+    &__button:hover {
+        color: #fff;
+        background-color: #CDA274;
+        cursor: pointer;
+    }
+
+    &__content {
+        column-count: 2;
+        gap: 24px;
+
+        &__item {
+            break-inside: avoid;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 24px;
+            position: relative;
+
+            // & svg path {
+            //     fill: #FFA928;
+            // }
+
+            // & svg:hover {
+            //     path {
+            //         fill: #ff3700;
+            //     }
+
+            //     cursor: pointer;
+            // }
+        }
+
+        &__favourite {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+
+            path {
+                fill: #FFA928;
+                cursor: pointer;
+            }
+        }
+    }
+}

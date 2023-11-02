@@ -198,6 +198,65 @@ ol li::marker {
   letter-spacing: 0.4px;
 }
 
+.project {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 61px;
+  align-items: center;
+}
+.project__buttons {
+  width: 880px;
+  border: 1px solid #CDA274;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.project__button {
+  border: none;
+  background-color: #fff;
+  width: 220px;
+  height: 75px;
+  border-radius: 18px;
+  font-family: "Jost", sans-serif;
+  color: #292F36;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0.36px;
+}
+.project__button:hover {
+  color: #fff;
+  background-color: #CDA274;
+  cursor: pointer;
+}
+.project__content {
+  -moz-column-count: 2;
+       column-count: 2;
+  gap: 24px;
+}
+.project__content__item {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.project__content__favourite {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.project__content__favourite path {
+  fill: #FFA928;
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
