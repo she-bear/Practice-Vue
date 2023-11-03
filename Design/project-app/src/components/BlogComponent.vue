@@ -34,18 +34,7 @@
     <section class="articles center">
         <h2 class="articles__title">Articles &amp; News</h2>
         <div class="articles__content">
-            <article v-for="(article, index) in article" :key="index" class="articles__item">
-                <img :src="article.img" alt="Article photo">
-                <h3 class="articles__item__title">{{ article.title }}</h3>
-                <div class="articles__item__bottom">
-                    <p class="articles__item__data">{{ article.date }} </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-                        <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                        <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </article>
+            <ArticleComponent v-for="(article, index) in article" :key="index" :article="article" />
         </div>
         <div class="articles__pagination">
             <img :src="paginationImage_1" alt="pagination icon">
@@ -76,11 +65,13 @@ import paginationImage_1 from "@/assets/img/pagination_01.svg";
 import paginationImage_2 from "@/assets/img/pagination_02.svg";
 import paginationImage_3 from "@/assets/img/pagination_03.svg";
 import paginationImage_more from "@/assets/img/pagination_more.svg";
+import ArticleComponent from "./ArticleComponent.vue";
 
 export default {
     components: {
         HeaderComponent,
         FooterComponent,
+        ArticleComponent
     },
     data() {
         const article = [
