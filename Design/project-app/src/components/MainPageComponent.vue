@@ -21,20 +21,7 @@
         <p class="projects__text">It is a long established fact that a reader will be distracted by the of readable
             content of page lookings at its layouts points.</p>
         <div class="projects__content">
-            <article v-for="(project, index) in projects" :key="index" class="projects__item">
-                <img :src="project.img" alt="Project image">
-                <div class="projects__item__content">
-                    <div class="projects__item__content__text">
-                        <h3 class="projects__item__content__title">{{ project.title }}</h3>
-                        <p class="projects__item__content__subtitle">{{ project.route }}</p>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
-                        <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                        <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </article>
+            <FollowComponent v-for="(project, index) in project" :key="index" :project="project" />
         </div>
     </section>
 
@@ -53,18 +40,7 @@
         <p class="articles__text">It is a long established fact that a reader will be distracted by the of readable
             content of a page when lookings at its layouts the points of using.</p>
         <div class="articles__content">
-            <article v-for="(article, index) in article" :key="index" class="articles__item">
-                <img :src="article.img" alt="Article photo">
-                <h3 class="articles__item__title">{{ article.title }}</h3>
-                <div class="articles__item__bottom">
-                    <p class="articles__item__data">{{ article.date }}</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-                        <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                        <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </article>
+            <ArticleComponent v-for="(article, index) in article" :key="index" :article="article" />
         </div>
     </section>
 
@@ -75,6 +51,8 @@
 
 import HeaderComponent from "./HeaderComponent.vue";
 import FooterComponent from "./FooterComponent.vue";
+import ArticleComponent from "./ArticleComponent.vue";
+import FollowComponent from "./FollowComponent.vue";
 
 import mainImage from "@/assets/img/main_image.png";
 import projectImage_1 from "@/assets/img/project_photo1.png";
@@ -85,13 +63,16 @@ import articleImage_1 from "@/assets/img/article_photo1.png";
 import articleImage_2 from "@/assets/img/article_photo2.png";
 import articleImage_3 from "@/assets/img/article_photo3.png";
 
+
 export default {
     components: {
         HeaderComponent,
         FooterComponent,
+        ArticleComponent,
+        FollowComponent,
     },
     data() {
-        const projects = [
+        const project = [
             {
                 id: 1,
                 img: projectImage_1,
@@ -158,7 +139,7 @@ export default {
 
         return {
             mainImage,
-            projects: projects,
+            project: project,
             statistic: statistic,
             article: article,
         }
