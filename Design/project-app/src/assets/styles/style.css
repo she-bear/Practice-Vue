@@ -233,6 +233,11 @@ ol li::marker {
   background-color: #CDA274;
   cursor: pointer;
 }
+.project__button:focus {
+  color: #fff;
+  background-color: #CDA274;
+  cursor: pointer;
+}
 .project__content {
   -moz-column-count: 2;
        column-count: 2;
@@ -246,6 +251,10 @@ ol li::marker {
   gap: 24px;
   margin-bottom: 24px;
   position: relative;
+  max-width: 563px;
+}
+.project__content__item img {
+  width: 100%;
 }
 .project__content__favourite {
   position: absolute;
@@ -253,8 +262,14 @@ ol li::marker {
   top: 5px;
 }
 .project__content__favourite path {
-  fill: #FFA928;
+  fill: none;
   cursor: pointer;
+}
+.project__content .unfavourite {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.project__content .unfavourite path {
+  fill: #FFA928;
 }
 
 * {

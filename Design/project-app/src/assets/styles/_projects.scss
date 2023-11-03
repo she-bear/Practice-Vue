@@ -31,6 +31,12 @@
         cursor: pointer;
     }
 
+    &__button:focus {
+        color: #fff;
+        background-color: #CDA274;
+        cursor: pointer;
+    }
+
     &__content {
         column-count: 2;
         gap: 24px;
@@ -42,18 +48,11 @@
             gap: 24px;
             margin-bottom: 24px;
             position: relative;
+            max-width: 563px;
 
-            // & svg path {
-            //     fill: #FFA928;
-            // }
-
-            // & svg:hover {
-            //     path {
-            //         fill: #ff3700;
-            //     }
-
-            //     cursor: pointer;
-            // }
+            img {
+                width: 100%;
+            }
         }
 
         &__favourite {
@@ -62,9 +61,17 @@
             top: 5px;
 
             path {
-                fill: #FFA928;
+                fill: none;
                 cursor: pointer;
             }
+        }
+
+        .unfavourite {
+            path {
+                fill: #FFA928;
+            }
+
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
     }
 }
