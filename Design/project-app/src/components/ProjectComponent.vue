@@ -16,7 +16,7 @@
             <button class="project__button" @click="getProjectFiltered('Living')">Living Area</button>
         </div>
         <div class="project__content">
-            <ArticleComponent v-for="(article, index) in current" :key="index" :article="article" />
+            <ToggleArticleComponent v-for="(article, index) in current" :key="index" :article="article" />
         </div>
     </section>
     <FooterComponent />
@@ -25,7 +25,7 @@
 <script>
 import FooterComponent from './FooterComponent.vue';
 import HeaderComponent from './HeaderComponent.vue';
-import ArticleComponent from './ArticleComponent.vue';
+import ToggleArticleComponent from './ToggleArticleComponent.vue';
 
 import topImage from "@/assets/img/top_project.png";
 import projectImage_1 from "@/assets/img/project_bedroom_1.png";
@@ -66,7 +66,7 @@ export default {
     components: {
         HeaderComponent,
         FooterComponent,
-        ArticleComponent
+        ToggleArticleComponent,
     },
 
     data() {
