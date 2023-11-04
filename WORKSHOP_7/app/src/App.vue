@@ -20,6 +20,16 @@
     <button @click="addToCart({ id: 1, name: 'Товар', price: 10 })">
       Добавить в корзину</button>
   </div>
+
+  <hr>
+
+  <div>
+    <h2>Данные с сервера</h2>
+    <ul>
+      <li v-for="(item, index) in data" :key="index">{{ item }}</li>
+    </ul>
+    <button @click="addFetchData">Get Data</button>
+  </div>
 </template>
 
 <script>
@@ -27,12 +37,12 @@ import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
 
 export default {
   computed: {
-    ...mapState(['count']),
+    ...mapState(['count', 'data']),
     ...mapGetters(['cartItems', 'totalItems', 'totalPrice']),
   },
   methods: {
     ...mapMutations(['INCREMENT', 'DECREMENT']),
-    ...mapActions(['addToCart']),
+    ...mapActions(['addToCart', 'addFetchData']),
   }
 }
 </script>

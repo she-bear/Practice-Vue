@@ -4,6 +4,7 @@ export default createStore({
   state: {
     count: 0,
     cart: [],
+    data: [],
   },
   getters: {
     cartItems(state) {
@@ -31,13 +32,26 @@ export default createStore({
     },
     ADD_ITEM_TO_CART(state, item) {
       state.cart.push(item);
+    },
+    SET_DATA(state, fetchData) {
+      // данные (data) из state будем заменять новыми данными
+      state.data = fetchData;
     }
   },
   actions: {
     addToCart(context, item) {
       // метод commit вызовет мутацию и передаст в неё данные из компонента
       context.commit('ADD_ITEM_TO_CART', item);
-    }
+    },
+
+    addFetchData(context) {
+      // имитация получения данных 
+      setTimeout(() => {
+        const dataFromServer = ['Data 1', 'Data 2', 'Data 3']
+
+        context.commit('SET_DATA', dataFromServer);
+      }, 3000)
+    },
   },
   modules: {
   }
