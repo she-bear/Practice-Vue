@@ -5,30 +5,32 @@
         <img :src="topImage" alt="Top look image">
     </section>
     <section class="look center">
-        <h2 class="projects__title">{{ pageData.title }}</h2>
-        <p class="projects__text projects__text-left">{{ pageData.paragraph }}</p>
+        <div>
+            <h2 class="projects__title">{{ pageData.title }}</h2>
+            <p class="projects__text projects__text-left">{{ pageData.paragraph }}</p>
+        </div>
     </section>
 
     <swiper :style="{
-        '--swiper-navigation-color': '#fff',
-        '--swiper-pagination-color': '#fff',
+        '--swiper-navigation-color': '#000',
+        '--swiper-pagination-color': '#000',
     }" :zoom="true" :navigation="true" :pagination="{
     clickable: true,
 }" :modules="modules" class="mySwiper">
 
         <swiper-slide>
             <div class="swiper-zoom-container">
-                <img :src="swiperImage" alt="image">
+                <img :src="swiperImage1" alt="image">
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="swiper-zoom-container">
-                <img :src="swiperImage" alt="image">
+                <img :src="swiperImage2" alt="image">
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="swiper-zoom-container">
-                <img :src="swiperImage" alt="image">
+                <img :src="swiperImage3" alt="image">
             </div>
         </swiper-slide>
     </swiper>
@@ -49,14 +51,17 @@ import 'swiper/css/pagination';
 import { Zoom, Navigation, Pagination } from 'swiper/modules';
 
 import topImage from "@/assets/img/top_look.png";
-import swiperImage from "@/assets/img/look_image.png";
+import swiperImage1 from "@/assets/img/look_image_1.png";
+import swiperImage2 from "@/assets/img/look_image_2.png";
+import swiperImage3 from "@/assets/img/look_image_3.png";
+
 
 export default {
     components: {
         HeaderComponent,
         FooterComponent,
         Swiper,
-        SwiperSlide
+        SwiperSlide,
     },
     setup() {
         return {
@@ -70,7 +75,9 @@ export default {
     data() {
         return {
             topImage,
-            swiperImage,
+            swiperImage1,
+            swiperImage2,
+            swiperImage3,
         }
     },
 }
@@ -82,6 +89,7 @@ export default {
     padding-bottom: 97px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .projects__text-left {
@@ -98,9 +106,8 @@ export default {
     overflow: hidden;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-    color: black !important;
+.swiper-slide img {
+    border-radius: 55px;
 }
 </style>
 
