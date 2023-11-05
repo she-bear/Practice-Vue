@@ -1,5 +1,4 @@
 <template>
-    <HeaderComponent />
     <section class="blog__top">
         <img :src="topImage" alt="Top blog image">
         <div class="blog__top__intro">
@@ -24,7 +23,6 @@
 
 <script>
 import FooterComponent from './FooterComponent.vue';
-import HeaderComponent from './HeaderComponent.vue';
 import ToggleArticleComponent from './ToggleArticleComponent.vue';
 
 import topImage from "@/assets/img/top_project.png";
@@ -64,7 +62,6 @@ import projectImage_32 from "@/assets/img/project_kitchen_8.png";
 
 export default {
     components: {
-        HeaderComponent,
         FooterComponent,
         ToggleArticleComponent,
     },

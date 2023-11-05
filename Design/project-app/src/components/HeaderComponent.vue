@@ -8,17 +8,37 @@
             </svg>
             <a href="index.html" class="logo__title">Interno</a>
         </div>
-        <nav class="header__right">
-            <a href="#" class="header__right__item">Home</a>
-            <a href="#" class="header__right__item">Project</a>
-            <a href="#" class="header__right__item">Blog</a>
-        </nav>
+
+        <div class="header__right">
+            <router-link class="header__right__item" v-for="link in links" :key="link.id" :to="link.url">{{ link.name
+            }}</router-link>
+        </div>
     </header>
 </template>
 
 <script>
 export default {
-
+    data() {
+        return {
+            links: [
+                {
+                    id: 0,
+                    name: 'Home',
+                    url: '/'
+                },
+                {
+                    id: 1,
+                    name: 'Project',
+                    url: '/project'
+                },
+                {
+                    id: 2,
+                    name: 'Blog',
+                    url: '/blog'
+                }
+            ]
+        }
+    }
 }
 </script>
 

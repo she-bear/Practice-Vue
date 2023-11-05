@@ -1,6 +1,4 @@
 <template>
-    <HeaderComponent />
-
     <section class="lost__page center">
         <div class="lost__page__content">
             <p class="lost__page__title">404</p>
@@ -18,11 +16,9 @@
 </template>
 
 <script>
-import HeaderComponent from './HeaderComponent.vue';
 import lostImage from "@/assets/img/lost_page.png";
 
 export default {
-    components: { HeaderComponent },
     data() {
         return {
             lostImage,

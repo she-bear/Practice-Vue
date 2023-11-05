@@ -1,6 +1,4 @@
 <template>
-    <HeaderComponent />
-
     <section class="blog__top">
         <img :src="topImage" alt="Top blog image">
         <div class="blog__top__intro">
@@ -36,12 +34,6 @@
         <div class="articles__content">
             <ArticleComponent v-for="(article, index) in article" :key="index" :article="article" />
         </div>
-        <div class="articles__pagination">
-            <img :src="paginationImage_1" alt="pagination icon">
-            <img :src="paginationImage_2" alt="pagination icon">
-            <img :src="paginationImage_3" alt="pagination icon">
-            <img :src="paginationImage_more" alt="pagination icon">
-        </div>
     </section>
 
     <FooterComponent />
@@ -49,9 +41,7 @@
 
 <script>
 
-import HeaderComponent from "./HeaderComponent.vue";
 import FooterComponent from "./FooterComponent.vue";
-
 
 import topImage from "@/assets/img/top_blog.png";
 import latestPostImage from "@/assets/img/latest_post_image.png";
@@ -61,15 +51,10 @@ import articleImage_3 from "@/assets/img/article_photo3.png";
 import articleImage_4 from "@/assets/img/article_photo4.png";
 import articleImage_5 from "@/assets/img/article_photo5.png";
 import articleImage_6 from "@/assets/img/article_photo6.png";
-import paginationImage_1 from "@/assets/img/pagination_01.svg";
-import paginationImage_2 from "@/assets/img/pagination_02.svg";
-import paginationImage_3 from "@/assets/img/pagination_03.svg";
-import paginationImage_more from "@/assets/img/pagination_more.svg";
 import ArticleComponent from "./ArticleComponent.vue";
 
 export default {
     components: {
-        HeaderComponent,
         FooterComponent,
         ArticleComponent
     },
@@ -111,10 +96,6 @@ export default {
             article: article,
             topImage,
             latestPostImage,
-            paginationImage_1,
-            paginationImage_2,
-            paginationImage_3,
-            paginationImage_more,
         }
     }
 }

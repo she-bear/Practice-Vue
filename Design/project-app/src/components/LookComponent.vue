@@ -1,6 +1,4 @@
 <template>
-    <HeaderComponent />
-
     <section class="blog__top">
         <img :src="topImage" alt="Top look image">
     </section>
@@ -40,7 +38,6 @@
 
 <script>
 import FooterComponent from './FooterComponent.vue';
-import HeaderComponent from './HeaderComponent.vue';
 import { mapState } from 'vuex';
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -58,7 +55,6 @@ import swiperImage3 from "@/assets/img/look_image_3.png";
 
 export default {
     components: {
-        HeaderComponent,
         FooterComponent,
         Swiper,
         SwiperSlide,

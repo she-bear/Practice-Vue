@@ -1,21 +1,16 @@
 <template>
-  <MainPageComponent />
-  <BlogComponent />
-  <ProjectComponent />
+  <HeaderComponent />
+  <router-view />
 </template>
 
 <script>
-import MainPageComponent from './components/MainPageComponent.vue';
-import BlogComponent from './components/BlogComponent.vue';
-import ProjectComponent from './components/ProjectComponent.vue';
+import HeaderComponent from './components/HeaderComponent.vue';
 
 
 export default {
   name: 'App',
   components: {
-    MainPageComponent,
-    BlogComponent,
-    ProjectComponent
+    HeaderComponent,
   }
 }
 </script>

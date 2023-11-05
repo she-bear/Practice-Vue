@@ -1,6 +1,4 @@
 <template>
-    <HeaderComponent />
-
     <section class="main center">
         <img :src="mainImage" alt="Main top image">
         <div class="main__content">
@@ -49,7 +47,6 @@
 
 <script>
 
-import HeaderComponent from "./HeaderComponent.vue";
 import FooterComponent from "./FooterComponent.vue";
 import ArticleComponent from "./ArticleComponent.vue";
 import FollowComponent from "./FollowComponent.vue";
@@ -66,7 +63,6 @@ import articleImage_3 from "@/assets/img/article_photo3.png";
 
 export default {
     components: {
-        HeaderComponent,
         FooterComponent,
         ArticleComponent,
         FollowComponent,
