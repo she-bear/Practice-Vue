@@ -23,7 +23,7 @@ const routes = [
     component: Contact,
   },
   {
-    path: '/catalog',
+    path: '/catalog/:pageNumber?',
     name: 'catalog',
     component: Catalog,
   },
